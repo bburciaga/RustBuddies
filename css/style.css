@@ -5,7 +5,6 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #CD5C5C;
 }
 
 .navbar {
@@ -56,17 +55,61 @@ body {
 .toggle-button .bar {
     height: 3px;
     width: 100%;
-    background-color: #32CD32;
+    background-color: white;
     border-radius: 10px;;
 }
 
-.welcome {
-    margin: auto;
-    width: 50%;
-    padding: 10px;
+.container-1 {
+    background-color: #8FBC8F;
+    width: 100%;
+    min-height: 350px;
+    display: grid;
 }
 
-.welcome-text {
-    width: auto;
-    text-align: center;
+.welcome {
+    background-color: white;
+    width: 350px;
+    min-height: 150px;
+    justify-self: center;
+    align-self: center;
+}
+
+.server-solo{
+    background: red;
+    width: 275px;
+    height: 200px;
+}
+.server-quad{
+    background: blue;
+    width: 275px;
+    height: 200px;
+}
+
+.container-2 {
+    background-color: #555;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+@media(max-width: 360px) {
+    .welcome {
+        width: 300px;
+    }
+    .container-2 {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        min-height: 600px;
+    }
+}
+
+#footer {
+    background: black;
+    width: 100%;
+    min-height: 150px;;
 }
