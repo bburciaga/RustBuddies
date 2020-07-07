@@ -82,6 +82,9 @@ body {
     justify-self: center;
     align-self: center;
     border-radius: 3%;
+    text-align: center;
+    vertical-align: center;
+    padding-top: 25px;
 }
 
 /*server section*/
