@@ -1,52 +1,72 @@
-* {
+/**
+ * index.scss
+ * - Add any styles you want here!
+ */
+ * {
+    font-family: "Roboto";
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    background-color: #333;
+}
+
+.box {
+    background-color: #17202A;
+    opacity: 1;
+    text-align: center;
+    vertical-align: center;
 }
 
 /*navbar*/
 .navbar {
+    margin: -10px -10px 0 -10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
     background: black;
     color: white;
-    border-bottom: 3px solid #8FBC8F;
+    border-bottom: 3px solid #00FFFF;
+    font-size: 1rem;
 }
 
-.navbar-img {
-    margin-top: 15px;
+.navbar .title {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.navbar img {
     height: 2.25rem;
-    justify-self: center;
+    justify-self: flex-start;
+    align-self: center;
 }
 
-.navbar-title {
-    font-size: 1.5rem;
-    justify-self: center;
+.navbar h3 {
+    font-size: 20px;
 }
 
-.navbar-links ul {
+.navbar .links {
     margin: 0;
     padding: 0;
     display: flex;
-}
-
-.navbar-links li {
     list-style: none;
+    flex-direction: row;
 }
 
-.navbar-links li a {
+.navbar .links a {
+    font-size: 20px;
     text-decoration: none;
     color: white;
+    border-radius: 10%;
     padding: 1rem;
     display: block;
+    flex-direction: row;
 }
 
-.navbar-links li:hover {
-    background-color: #555;
+.navbar .links a:hover {
+    background-color: rgb(97, 97, 97);
 }
 
 .toggle-button {
@@ -69,66 +89,191 @@ body {
 
 /*welcome section*/
 .welcome-container {
-    background-color: #333;
-    width: 100%;
-    min-height: 350px;
-    display: grid;
+    margin-left: -10px;
+    width: 110%;
+    min-height: 700px;
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backface-visibility: hidden;
+    background-position: center 0;
+    background-image: linear-gradient(transparent, #333),
+    url("../images/Nightmarez-3.png");
 }
-
-.welcome {
-    background-color: white;
-    width: 350px;
+.welcome-container div {
     min-height: 150px;
-    justify-self: center;
     align-self: center;
     border-radius: 3%;
-    text-align: center;
-    vertical-align: center;
     padding-top: 25px;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.welcome-container header {
+    padding: 25px;
+    font-size: 1em;
+}
+
+.welcome-container p {
+    font-size: 0.5em;
 }
 
 /*server section*/
 .server-container {
-    background-color: #555;
-    width: 100%;
+    margin-left: -4px;
+    width: 101%;
     height: auto;
-    min-height: 400px;
+    min-height: 700px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    padding-bottom: 0;
-    margin-bottom: 0;
+    flex-wrap: wrap;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backface-visibility: hidden;
+    background-position: center 0;
+}
+
+.server-container h2 {
+    color: white;
+}
+
+.server-container p {
+    font-size: 25px;
+    color: white;
 }
 
 .server-solo{
-    background: red;
-    width: 275px;
-    height: 200px;
-    border-radius: 3%;
+    min-width: 275px;
+    width: auto;
+    height: auto;
+    min-height: 300px;
+    outline: 2px solid white;
+    -moz-outline-radius: 5%;
+    border-radius: 5%;
 }
+
+.btn-gradient {
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    z-index: 3;
+    background: transparent;
+    color: #1172c4;
+    font-size: 14px;
+    border-color: #1172c4;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 22px;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    transition: all 0.2s linear;
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    border-color: white;
+    background: transparent;
+}
+
+.btn-gradient:hover {
+    color: #17202A;
+    background: white;
+    border-color: white;
+}
+
+.btn-gradient:active {
+    color: white;
+    background: #1172c4;
+    border-color: white;
+    transition: all 0.2s linear;
+    color: white;
+    background: #00164a;
+    border-color: #00164a;
+}
+
 .server-quad{
-    background: blue;
-    width: 275px;
-    height: 200px;
+    min-width: 275px;
+    width: auto;
+    height: auto;
+    min-height: 300px;
+    outline: 2px solid white;
+    -moz-outline-radius: 5%;
+    border-radius: 5%;
+}
+
+/*info section*/
+.info-container {
+    width: 100%;
+    height: auto;
+    min-height: 700px;
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backface-visibility: hidden;
+    background-position: center center;
+}
+
+.info-container h3 {
+    color: white;
+    text-align: center;
+}
+
+.info-container div {
+    width: 90%;
+    min-height: 250px;
+    max-width: 550px;
     border-radius: 3%;
+    padding-top: 25px;
+    vertical-align: center;
+    align-self: center;
+    -moz-outline-radius: 5%;
+    outline: 2px solid white;
+}
+
+.info-container div p {
+    color: white;
+    text-align: left;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 10px;
 }
 
 /*footer*/
 footer {
-    margin-top: -17px;
+    margin-bottom: -10px;
+    margin-left: -10px;
     background: black;
-    width: 100%;
+    width: 105%;
     min-height: 100px;
     display: flex;
+    justify-self: stretch;
     flex-direction: column;
-    border-top: 3px solid #8FBC8F;
+    border-top: 3px solid #00FFFF;
 }
 
 footer ul {
+    margin-left: -115px;
     display: flex;
     justify-content: center;
+    align-items: baseline;
+}
+
+footer div {
+    display: flex;
     flex-direction: row;
+    justify-content: center;
+}
+
+footer p {
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 .icon-discord {
@@ -141,14 +286,65 @@ footer ul {
     height: 50px;
 }
 
+.icon-steam {
+    width: 50px;
+    height: 50px;
+}
+
 /*Responsive Design Media*/
 @media (max-width: 670px) {
+    .welcome-container {
+        width: 106%;
+        min-height: 700px;
+        display: flex;
+        justify-content: center;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        backface-visibility: hidden;
+        background-image: url('../images/Nightmarez-4.png');
+        border-bottom: 3px solid #00FFFF;
+    }
+    .server-container {
+        min-height: 900px;
+        display: flex;
+        flex-direction: column;
+        width: 106%;
+    }
+    .info-container {
+        width: 106%;
+    }
+    .info-container div {
+        width: 88%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
     .welcome {
         width: 300px;
     }
-    .server-container {
-        display: flex;
-        flex-direction: column;
-        min-height: 600px;
+    .about {
+        min-width: 275px;
+        width: auto;
+    }
+    footer {
+        width: 107%;
+    }
+    footer ul {
+        margin-left: -40px;
+    }
+    footer p {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1225px) {
+    .server-solo{
+        min-width: 350px;
+        min-height: 400px;
+    }
+    
+    .server-quad{
+        min-width: 350px;
+        min-height: 400px;
     }
 }
