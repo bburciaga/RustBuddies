@@ -1,166 +1,78 @@
-/**
- * index.scss
- * - Add any styles you want here!
- */
- * {
-    font-family: "Roboto";
+* {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
 }
-
+hr {
+    margin: 5px auto;
+    width: 85%;
+}
+p {
+    margin: 5px 0;
+}
 body {
     background-color: #333;
+    font-family: Open Sans;
+    overflow-x: hidden;
 }
-
-.box {
-    background-color: #17202A;
-    opacity: 1;
-    text-align: center;
-    vertical-align: center;
+.icon {
+    width: 50px;
+    height: 50px;
 }
-
-/*navbar*/
-.navbar {
-    margin: -10px -10px 0 -10px;
+.infoimg{
+    width: 400px;
+    height: 400px;
+}
+.container {
+    width: 100%;
+    height: auto;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
+}
+.box {
+    /*box-shadow: -26px -25px 26px 5px #17202A;*/
+    background:  linear-gradient(#092a45, transparent);
+    text-align: center;
+    opacity: 1;
+}
+.logo img{
+    width: 40px;
+    height: 40px;
+}
+nav {
+    z-index: 4;
+    position: fixed;
+    height: 63px;
+    width: 100%;
     background: black;
     color: white;
-    border-bottom: 3px solid #00FFFF;
-    font-size: 1rem;
+    padding: 0px 10px;
+    border-bottom: 3px solid #0c3c64;
 }
-
-.navbar .title {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
+ul {
+    list-style-type: none;
 }
-
-.navbar img {
-    height: 2.25rem;
-    justify-self: flex-start;
-    align-self: center;
-}
-
-.navbar h3 {
-    font-size: 20px;
-}
-
-.navbar .links {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    list-style: none;
-    flex-direction: row;
-}
-
-.navbar .links a {
-    font-size: 20px;
+a {
+    color: white;
     text-decoration: none;
-    color: white;
-    border-radius: 10%;
-    padding: 1rem;
+}
+.item a:hover {
+    padding: 10px 10px;
+    background: #696969;
+    border-radius: 50em;
+    transition: all .25s;
+}
+.menu li {
+    padding: 10px 10px;
+}
+.menu li a {
     display: block;
-    flex-direction: row;
-}
-
-.navbar .links a:hover {
-    background-color: rgb(97, 97, 97);
-}
-
-.toggle-button {
-    position: absolute;
-    top: .75rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-}
-
-.toggle-button .bar {
-    height: 3px;
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
-}
-
-/*welcome section*/
-.welcome-container {
-    margin-left: -10px;
-    width: 110%;
-    min-height: 700px;
-    display: flex;
-    justify-content: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    backface-visibility: hidden;
-    background-position: center 0;
-    background-image: linear-gradient(transparent, #333),
-    url("../images/Nightmarez-3.png");
-}
-.welcome-container div {
-    min-height: 150px;
-    align-self: center;
-    border-radius: 3%;
-    padding-top: 25px;
-    font-size: 50px;
-    font-weight: 700;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    color: white;
-}
-
-.welcome-container header {
-    padding: 25px;
-    font-size: 1em;
-}
-
-.welcome-container p {
-    font-size: 0.5em;
-}
-
-/*server section*/
-.server-container {
-    margin-left: -4px;
-    width: 101%;
-    height: auto;
-    min-height: 700px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-repeat: no-repeat;
-    background-size: cover;
-    backface-visibility: hidden;
-    background-position: center 0;
-}
-
-.server-container h2 {
-    color: white;
-}
-
-.server-container p {
-    font-size: 25px;
-    color: white;
-}
-
-.server-solo{
-    min-width: 275px;
-    width: auto;
-    height: auto;
-    min-height: 300px;
-    outline: 2px solid white;
-    -moz-outline-radius: 5%;
-    border-radius: 5%;
 }
 
 .btn-gradient {
+    align-self: center;
     cursor: pointer;
+    width: 80%;
     outline: none;
     position: relative;
     z-index: 3;
@@ -197,154 +109,247 @@ body {
     border-color: #00164a;
 }
 
-.server-quad{
-    min-width: 275px;
-    width: auto;
-    height: auto;
-    min-height: 300px;
-    outline: 2px solid white;
-    -moz-outline-radius: 5%;
-    border-radius: 5%;
-}
-
-/*info section*/
-.info-container {
-    width: 100%;
-    height: auto;
-    min-height: 700px;
+/* Mobile Menu */
+.menu {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.toggle{
+    order: 1;
+}
+.item {
+    order: 2;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+.item.active {
+    background: black;
+    display: block;
+}
+.toggle {
+    cursor: pointer;
+}
+.bars {
+    background: white;
+    display: inline-block;
+    position: relative;
+    height: 2px;
+    width: 18px;
+}
+.bars::before, .bars::after {
+    background: white;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    height: 2px;
+    width: 18px;
+}
+.bars::before {
+    top: 5px;
+}
+.bars::after {
+    top: -5px;
+}
+.welcome {
+    padding-top: 20%;
+    padding-bottom: 20%;
+    min-height: 700px;
     justify-content: center;
-    background-repeat: no-repeat;
     background-size: cover;
     backface-visibility: hidden;
-    background-position: center center;
+    background-position: center 0;
+    background-image: linear-gradient(transparent, #333),
+    url("../images/Nightmarez-4.png");
 }
-
-.info-container h3 {
-    color: white;
+.welcome div {
+    min-height: 150px;
     text-align: center;
-}
-
-.info-container div {
-    width: 90%;
-    min-height: 250px;
-    max-width: 550px;
-    border-radius: 3%;
-    padding-top: 25px;
-    vertical-align: center;
-    align-self: center;
-    -moz-outline-radius: 5%;
-    outline: 2px solid white;
-}
-
-.info-container div p {
     color: white;
-    text-align: left;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-bottom: 10px;
 }
-
-/*footer*/
-footer {
-    margin-bottom: -10px;
-    margin-left: -10px;
-    background: black;
-    width: 105%;
-    min-height: 100px;
+.server-cont {
+    min-height: 700px;
     display: flex;
+    justify-content: space-evenly;
+    flex-flow: column wrap;
+}
+.servers {
+    padding-top: 15px;
+    display: flex;
+    flex-flow: column wrap;
+    width: 300px;
+    min-height: 300px;
+    color: white;
+}
+.intro {
+    flex-direction: column;
+    padding: 30px 0;
+    color: white;
+    width: 100%;
+}
+.intro div {
+    width: 500px;
+}
+.intro h2, .intro p {
+    font-size: 1.25rem;
+}
+.rules {
+    width: 100%;
+    padding: 30px 0;
+    color: white;
+}
+.rules div {
+    margin: auto;
+    width: 500px;
+}
+.rules h2, .rules p {
+    font-size: 1.25rem;
+}
+.wipes {
+    flex-direction: column;
+    margin: 0 0;
+    padding: 30px 0;
+    color: white;
+    width: 300px;
+}
+.wipes h2, .wipes p {
+    font-size: 1.25rem;
+}
+footer {
+    background: black;
+    min-height: 100px;
     justify-self: stretch;
     flex-direction: column;
-    border-top: 3px solid #00FFFF;
+    border-top: 3px solid #0c3c64;
 }
-
 footer ul {
-    margin-left: -115px;
+    padding-top: 10px;
     display: flex;
     justify-content: center;
     align-items: baseline;
 }
-
 footer div {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-flow: column wrap;
+    align-items: center;
 }
-
+footer hr {
+    width: 60%;
+    color: #333;
+}
 footer p {
-    padding-left: 3%;
-    padding-right: 3%;
+    padding: 10px;
 }
 
-.icon-discord {
-    width: 50px;
-    height: 50px;
-}
-
-.icon-youtube {
-    width: 50px;
-    height: 50px;
-}
-
-.icon-steam {
-    width: 50px;
-    height: 50px;
-}
-
-/*Responsive Design Media*/
-@media (max-width: 670px) {
-    .welcome-container {
-        width: 106%;
-        min-height: 700px;
+/* Tablet Menu */
+@media all and (min-width: 468px) {
+    nav {
         display: flex;
+    }
+    .menu {
         justify-content: center;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        backface-visibility: hidden;
-        background-image: url('../images/Nightmarez-4.png');
-        border-bottom: 3px solid #00FFFF;
     }
-    .server-container {
-        min-height: 900px;
-        display: flex;
-        flex-direction: column;
-        width: 106%;
+    .logo h2 {
+        font-size: 1.5rem;
     }
-    .info-container {
-        width: 106%;
+    .logo {
+        flex: 1;
     }
-    .info-container div {
-        width: 88%;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    .welcome {
-        width: 300px;
-    }
-    .about {
-        min-width: 275px;
+    .item {
         width: auto;
     }
-    footer {
-        width: 107%;
+    h2 {
+        font-size: 2rem;
     }
-    footer ul {
-        margin-left: -40px;
+    p {
+        font-size: 1.25rem;
     }
-    footer p {
-        font-size: 15px;
+    .server-cont {
+        flex-direction: row;
+    }
+    .servers p, .servers h2, nav h2 {
+        font-size: 0.6rem;
+    }
+    .intro {
+        width: 500px;
+    }
+    .intro h2, .intro p {
+        font-size: 1.65rem;
+    }
+    .rules {
+        flex-flow: row-reverse nowrap;
+        width: 500px;
+    }
+    .rules h2, .rules p {
+        font-size: 1.65rem;
+    }
+    .wipes {
+        width: 500px;
+    }
+    .wipes h2, .wipes p {
+        font-size: 1.65rem;
+    }
+    .box {
+        max-width: 600px;
+    }
+    footer div {
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 }
 
-@media (min-width: 1225px) {
-    .server-solo{
-        min-width: 350px;
-        min-height: 400px;
+/* Desktop Menu */
+@media all and (min-width: 768px) {
+    nav {
+        display: flex;
     }
-    
-    .server-quad{
-        min-width: 350px;
-        min-height: 400px;
+    .welcome {
+        min-height: 1000px;
+        background-size: cover;
+        backface-visibility: hidden;
+        background-position: center 0;
+        background-image:   linear-gradient(transparent, #333),
+                            url("../images/Nightmarez-3.png");
+    }
+    .item {
+        display: block;
+        width: auto;
+    }
+    .toggle {
+        display: none;
+    }
+    .logo {
+        order: 0;
+    }
+    .logo a {
+        align-self: flex-end;
+    }
+    .item {
+        order: 1;
+    }
+    .servers {
+        justify-content: center;
+        width: 450px;
+        height: 450px;
+    }
+    .servers h2 {
+        padding: 0 0 15px 0;
+        font-size: 1.75rem;
+    }
+    .servers p {
+        padding: 15px 0px;
+        font-size: 1.25rem;
+    }
+    .intro {
+        flex-direction: row;
+        margin: 0 auto 0 100px;
+    }
+    .rules {
+        margin: 0 100px 0 auto;
+    }
+    .wipes {
+        margin: 0 auto 0 100px;
     }
 }
